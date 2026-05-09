@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lifetime — max keith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:    #e1cdcb;
+  --ink:   #718858;
+  --dim:   #91a07a;
+  --faint: #d0bcba;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+  font-size: 13px;
+  line-height: 1.55;
+  min-height: 100vh;
+}
+
+a { color: var(--ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── header ── */
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding: 20px 64px;
+}
+.site-logo { font-size: 13px; font-weight: normal; }
+
+/* ── page ── */
+.page {
+  padding: 52px 64px 80px;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .site-header { padding: 20px 24px; }
+  .page {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 24px 60px;
+  }
+  .heatmap-col { display: none; }
+  .tweaks-toggle { display: none; }
+  .tweaks-panel  { display: none !important; }
+  .total-value { font-size: 32px; }
+  .stat-grid { grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+}
+
+/* ── left column ── */
+.pg-title { font-size: 13px; font-weight: normal; margin-bottom: 20px; }
+
+.intro { margin-bottom: 24px; }
+.intro p { margin-bottom: 5px; }
+
+.live-dot {
+  display: inline-block; width: 5px; height: 5px;
+  background: var(--ink); border-radius: 50%;
+  margin-left: 4px; vertical-align: middle;
+  animation: blink 2.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.15} }
+
+hr { border: none; border-top: 1px solid var(--ink); opacity: .2; margin: 24px 0; }
+
+.total-label { font-size: 10px; text-transform: uppercase; letter-spacing: .09em; color: var(--dim); margin-bottom: 8px; }
+.total-value { font-size: 40px; font-weight: bold; letter-spacing: -.025em; line-height: 1; margin-bottom: 24px; }
+
+/* ── stat grid ── */
+.stat-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 16px 20px; margin-bottom: 24px;
+}
+.stat-lbl { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin-bottom: 2px; }
+.stat-val  { font-size: 15px; font-weight: bold; font-variant-numeric: tabular-nums; }
+
+/* ── activity list ── */
+.act-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .09em; color: var(--dim); margin-bottom: 10px; }
+
+.act-list { margin: 0 0 4px; }
+.act-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--faint);
+}
+.act-row:last-child { border-bottom: none; }
+.act-name { font-size: 10px; text-transform: uppercase; letter-spacing: .07em; color: var(--dim); }
+.act-time  { font-size: 12px; font-variant-numeric: tabular-nums; }
+
+/* ── year spark (small bar beside activity time) ── */
+.act-share {
+  height: 2px; background: var(--faint); border-radius: 1px;
+  flex: 1; margin: 0 10px; align-self: center; overflow: hidden;
+}
+.act-share-fill { height: 100%; border-radius: 1px; }
+
+.pg-foot { margin-top: 28px; font-size: 11px; color: var(--dim); line-height: 1.6; }
+
+/* ── right column: heatmap ── */
+.heatmap-col { padding-top: 4px; }
+
+.hm-label { font-size: 10px; text-transform: uppercase; letter-spacing: .09em; color: var(--dim); margin-bottom: 14px; }
+
+.hm-outer { overflow-x: auto; padding-bottom: 6px; }
+
+.hm-rows { display: inline-flex; flex-direction: column; gap: 3px; }
+
+.hm-row { display: flex; align-items: center; gap: 7px; }
+
+.yr-lbl {
+  font-size: 10px; color: var(--dim);
+  width: 32px; text-align: right; flex-shrink: 0;
+}
+.yr-lbl.current { color: var(--ink); font-weight: bold; }
+
+.wk-cells { display: flex; gap: 2px; }
+.wk { width: 13px; height: 9px; border-radius: 1px; flex-shrink: 0; cursor: default; transition: opacity .1s; }
+.wk:hover { opacity: 1 !important; }
+
+.yr-tot {
+  font-size: 10px; color: var(--dim); padding-left: 8px;
+  flex-shrink: 0; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.yr-tot.current { color: var(--ink); }
+
+/* ── legend ── */
+.legend { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); }
+.legend-sq { width: 9px; height: 9px; border-radius: 1px; }
+
+/* ── tweaks ── */
+.tweaks-toggle {
+  position: fixed; bottom: 24px; right: 24px; z-index: 102;
+  background: none; border: 1px solid var(--dim);
+  color: var(--dim); font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 10px; padding: 5px 10px; cursor: pointer;
+  letter-spacing: .08em; text-transform: uppercase;
+  transition: border-color .15s, color .15s;
+}
+.tweaks-toggle:hover { border-color: var(--ink); color: var(--ink); }
+
+.tweaks-panel {
+  position: fixed; bottom: 24px; right: 24px; z-index: 100;
+  background: var(--bg); border: 1px solid var(--ink);
+  padding: 14px 16px; font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  font-size: 11px; color: var(--ink); min-width: 200px; display: none;
+}
+.tweaks-panel.on { display: block; }
+.tp-head { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; display: flex; justify-content: space-between; }
+.tp-close { cursor: pointer; border: none; background: none; color: var(--ink); font-family: inherit; font-size: 13px; padding: 0; opacity: .5; }
+.tp-row { margin-bottom: 11px; }
+.tp-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: var(--dim); margin-bottom: 5px; }
+.tp-btns { display: flex; gap: 5px; flex-wrap: wrap; }
+.tp-btn { padding: 3px 8px; font-family: 'IBM Plex Mono', 'Courier New', monospace; font-size: 10px; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; text-transform: uppercase; letter-spacing: .04em; }
+.tp-btn.sel { background: var(--ink); color: var(--bg); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel">
+const { useState } = React;
+
+// ━━ DATA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// When served by the training log server, window.__LIFETIME is pre-injected.
+// When served as a static page, data is fetched from the API at runtime.
+const EMPTY_DATA = { updated:'–', lt:{ totalH:0, totalM:0, sessions:0, distKm:0, elevM:0, avgH:0, avgM:0 }, acts:[], yearH:{} };
+let DATA    = (window.__LIFETIME || {}).data    || EMPTY_DATA;
+let HEATMAP = (window.__LIFETIME || {}).heatmap || {};
+
+// ━━ Colors ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const THEMES = {
+  site: { run:'#718858', ride:'#4a7a8a', climb:'#6a5f8a', skate:'#4a8a78', ski:'#5a6f8a', workout:'#7a8a60', empty:'#cebfbd' },
+  mono: { run:'#4a6840', ride:'#4a6840', climb:'#4a6840', skate:'#4a6840', ski:'#4a6840', workout:'#4a6840', empty:'#c0b0a6' },
+  dark: { run:'#e07055', ride:'#55a0cc', climb:'#a076c0', skate:'#50c0a0', ski:'#60a8cc', workout:'#80c070', empty:'#252525' },
+};
+
+// ━━ Helpers ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const fmtT  = (h,m) => `${h.toLocaleString()}h ${String(m).padStart(2,'0')}m`;
+const fmtKm = km    => `${Math.round(km).toLocaleString()} km`;
+const fmtEl = m     => `${(Math.round(m/1000)*1000).toLocaleString()} m`;
+const fmtYH = d     => { const h=Math.floor(d), m=Math.round((d-h)*60); return m ? `${h}h ${String(m).padStart(2,'0')}m` : `${h}h`; };
+
+// ━━ Derived constants ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+const CURRENT_YEAR = new Date().getFullYear();
+
+// ━━ App ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+function App() {
+  const [tweaksOn,   setTweaksOn]   = useState(false);
+  const [heatColors, setHeatColors] = useState('site');
+  const [showTotals, setShowTotals] = useState(true);
+  const [filterAct,  setFilterAct]  = useState(null);
+  const [tooltip,    setTooltip]    = useState(null);
+
+  const yearNums  = Object.keys(DATA.yearH).map(Number);
+  const PEAK_YEAR  = yearNums.reduce((best, yr) => DATA.yearH[yr] > (DATA.yearH[best]||0) ? yr : best, yearNums[0] || 0);
+  const FIRST_YEAR = yearNums.length ? Math.min(...yearNums) : CURRENT_YEAR;
+  const NUM_YEARS  = yearNums.length;
+
+  const colors  = THEMES[heatColors] || THEMES.site;
+  const isDark  = heatColors === 'dark';
+  const lt      = DATA.lt;
+  const maxActH = Math.max(1, ...DATA.acts.map(a => a.h + a.m/60));
+  const years   = yearNums.sort((a,b) => b-a);
+
+  return (<>
+    {/* ── Header ── */}
+    <header className="site-header">
+      <a href="https://maxkeith.co" className="site-logo">max keith</a>
+    </header>
+
+    {/* ── Two-column page ── */}
+    <div className="page">
+
+      {/* LEFT: stats + activity list */}
+      <div>
+        <h1 className="pg-title">// lifetime //</h1>
+
+        <div className="intro">
+          <p>{fmtT(lt.totalH, lt.totalM)} of moving.</p>
+          <p>{lt.sessions.toLocaleString()} sessions across {NUM_YEARS} years — an average of {fmtT(lt.avgH, lt.avgM)} a week.</p>
+          <p style={{color:'var(--dim)', marginTop:4}}>as of {DATA.updated}.<span className="live-dot" /></p>
+        </div>
+
+        <hr />
+
+        <div className="total-label">total time</div>
+        <div className="total-value">{fmtT(lt.totalH, lt.totalM)}</div>
+
+        <div className="stat-grid">
+          <div><div className="stat-lbl">distance</div><div className="stat-val">{fmtKm(lt.distKm)}</div></div>
+          <div><div className="stat-lbl">elevation gain</div><div className="stat-val">{fmtEl(lt.elevM)}</div></div>
+          <div><div className="stat-lbl">avg / week</div><div className="stat-val">{fmtT(lt.avgH, lt.avgM)}</div></div>
+          <div><div className="stat-lbl">sessions</div><div className="stat-val">{lt.sessions.toLocaleString()}</div></div>
+        </div>
+
+        <hr />
+
+        <div className="act-lbl">by activity</div>
+        <div className="act-list">
+          {DATA.acts.map(a => {
+            const pct        = ((a.h + a.m/60) / maxActH) * 100;
+            const isFiltered = filterAct && filterAct !== a.id;
+            return (
+              <div key={a.id} className="act-row"
+                style={{ opacity: isFiltered ? 0.35 : 1, cursor: 'default', transition: 'opacity .2s' }}
+                onMouseEnter={() => setFilterAct(a.id)}
+                onMouseLeave={() => setFilterAct(null)}>
+                <span className="act-name">{a.label}</span>
+                <div className="act-share">
+                  <div className="act-share-fill" style={{ width:`${pct}%`, background: colors[a.id] || colors.workout }} />
+                </div>
+                <span className="act-time">{fmtT(a.h, a.m)}</span>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="pg-foot">
+          {fmtKm(lt.distKm)} covered. {fmtEl(lt.elevM)} of elevation gain.<br/>
+          from training log — last updated {DATA.updated}.
+        </div>
+      </div>
+
+      {/* RIGHT: heatmap */}
+      <div className="heatmap-col" style={isDark ? { background:'#111', padding:'20px', margin:'-4px -20px' } : {}}>
+        <div className="hm-label" style={isDark ? {color:'#6a7a6a'} : {}}>{`week by week — ${FIRST_YEAR} → ${CURRENT_YEAR}`}</div>
+        <div className="hm-outer">
+          <div className="hm-rows">
+            {years.map(yr => {
+              const isCur  = yr === CURRENT_YEAR;
+              const isPeak = yr === PEAK_YEAR;
+              const lc     = isDark ? '#6a7a6a' : 'var(--dim)';
+              const lcCur  = isDark ? '#aabcaa' : 'var(--ink)';
+              const weeks  = HEATMAP[yr] || new Array(52).fill(null);
+              return (
+                <div key={yr} className="hm-row">
+                  <span className={`yr-lbl${isCur ? ' current' : ''}`}
+                    style={{ color: (isCur || isPeak) ? lcCur : lc, fontWeight: isPeak ? 'bold' : 'normal' }}>
+                    {yr}{isCur ? ' ›' : isPeak ? ' ↑' : ''}
+                  </span>
+                  <div className="wk-cells">
+                    {weeks.map((cell, i) => {
+                      const dimmed = filterAct && cell && cell.act !== filterAct;
+                      const empty  = !cell;
+                      const op = empty
+                        ? (filterAct ? 0.1 : (isDark ? 0.6 : 0.4))
+                        : dimmed ? 0.08
+                        : cell.intensity;
+                      return (
+                        <div key={i} className="wk" style={{
+                          background:  cell ? (colors[cell.act] || colors.workout) : colors.empty,
+                          opacity:     op,
+                          transition: 'opacity .15s',
+                        }}
+                          onMouseEnter={e  => cell && setTooltip({ x:e.clientX, y:e.clientY, yr, act:cell.act })}
+                          onMouseMove={e   => cell && setTooltip(v => v ? {...v, x:e.clientX, y:e.clientY} : null)}
+                          onMouseLeave={() => setTooltip(null)}
+                        />
+                      );
+                    })}
+                  </div>
+                  {showTotals && (
+                    <span className={`yr-tot${isCur ? ' current' : ''}`}
+                      style={{ color: (isCur || isPeak) ? lcCur : lc }}>
+                      {fmtYH(DATA.yearH[yr])}{isCur ? ' ↗' : isPeak ? ' ·peak' : ''}
+                    </span>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="legend">
+          {DATA.acts.map(a => (
+            <div key={a.id} className="legend-item"
+              style={{ opacity: filterAct && filterAct !== a.id ? 0.35 : 1, cursor:'default', transition:'opacity .2s' }}
+              onMouseEnter={() => setFilterAct(a.id)}
+              onMouseLeave={() => setFilterAct(null)}>
+              <div className="legend-sq" style={{ background: colors[a.id] || colors.workout }} />
+              {a.label}
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    {/* ── Cell tooltip ── */}
+    {tooltip && (
+      <div style={{
+        position: 'fixed', left: tooltip.x + 14, top: tooltip.y - 32,
+        background: 'var(--bg)', border: '1px solid var(--ink)',
+        padding: '3px 8px', fontFamily: "'IBM Plex Mono','Courier New',monospace",
+        fontSize: 10, color: 'var(--ink)', pointerEvents: 'none',
+        zIndex: 1000, letterSpacing: '.04em', textTransform: 'uppercase',
+        whiteSpace: 'nowrap',
+      }}>
+        {tooltip.yr} — {tooltip.act}
+      </div>
+    )}
+
+    {/* ── Tweaks toggle button ── */}
+    {!tweaksOn && (
+      <button className="tweaks-toggle" onClick={() => setTweaksOn(true)}>tweaks</button>
+    )}
+
+    {/* ── Tweaks panel ── */}
+    <div className={`tweaks-panel${tweaksOn ? ' on' : ''}`}>
+      <div className="tp-head">
+        <span>tweaks</span>
+        <button className="tp-close" onClick={() => setTweaksOn(false)}>✕</button>
+      </div>
+      <div className="tp-row">
+        <div className="tp-lbl">heatmap colors</div>
+        <div className="tp-btns">
+          {[['site','site palette'],['mono','monochrome'],['dark','classic dark']].map(([val,lbl]) => (
+            <button key={val} className={`tp-btn${heatColors === val ? ' sel' : ''}`}
+              onClick={() => setHeatColors(val)}>{lbl}</button>
+          ))}
+        </div>
+      </div>
+      <div className="tp-row">
+        <div className="tp-lbl">year totals</div>
+        <div className="tp-btns">
+          <button className={`tp-btn${showTotals  ? ' sel' : ''}`} onClick={() => setShowTotals(true)}>show</button>
+          <button className={`tp-btn${!showTotals ? ' sel' : ''}`} onClick={() => setShowTotals(false)}>hide</button>
+        </div>
+      </div>
+    </div>
+  </>);
+}
+
+async function init() {
+  if (!window.__LIFETIME) {
+    try {
+      const res  = await fetch('https://log.maxkeith.co/api/lifetime');
+      const json = await res.json();
+      DATA    = json.data    || EMPTY_DATA;
+      HEATMAP = json.heatmap || {};
+    } catch(e) {
+      console.warn('lifetime: could not reach API', e);
+    }
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+}
+init();
+</script>
+</body>
+</html>
