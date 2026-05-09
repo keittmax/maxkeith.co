@@ -223,6 +223,17 @@ def build_archive(posts: list):
         posts_html=html,
     ))
 
+def build_currently():
+    src = Path("currently.md")
+    content = render_md(src.read_text(encoding="utf-8")) if src.exists() else "<p>—</p>"
+    out_dir = OUTPUT_DIR / "currently"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "index.html").write_text(render_page("index",
+        page_title=f"currently — {SITE_TITLE}",
+        page_heading="currently",
+        posts_html=f'<div class="currently-body">{content}</div>',
+    ))
+
 def build_about():
     content = """
 <div class="about-page">
@@ -274,6 +285,7 @@ def main():
     build_posts(posts)
     build_tags(posts)
     build_archive(posts)
+    build_currently()
     build_about()
     copy_static()
 
