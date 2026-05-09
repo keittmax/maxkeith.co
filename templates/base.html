@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{page_title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <a href="/" class="site-logo"><strong>max keith</strong></a>
+      <button class="burger" onclick="var n=document.querySelector('.nav');var o=n.classList.toggle('open');this.textContent=o?'[ close ]':'[ menu ]';">[ menu ]</button>
+      <nav class="nav">
+        <a href="/posts/">posts</a>
+        <a href="/archive/">archive</a>
+        <a href="/tags/">tags</a>
+        <a href="https://log.maxkeith.co/lifetime">lifetime</a>
+      </nav>
+    </header>
+    <main class="site-main">
+      {{content}}
+    </main>
+    <footer class="site-footer">
+      <p>max keith</p>
+    </footer>
+  </div>
+</body>
+</html>

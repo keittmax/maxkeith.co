@@ -1,0 +1,267 @@
+/* maxkeith.co — main stylesheet */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── Variables ─────────────────────────────────────────────────────────────── */
+:root {
+  --bg:    #e1cdcb;
+  --ink:   #718858;
+  --dim:   #91a07a;
+  --faint: #d0bcba;
+  --max-w: 640px;
+  --font:  'IBM Plex Mono', 'Courier New', Courier, monospace;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ──────────────────────────────────────────────────────────────────── */
+html { font-size: 15px; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.7;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+a:hover { opacity: 0.65; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Layout ────────────────────────────────────────────────────────────────── */
+.site {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 40px 0 80px;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────────── */
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.site-logo {
+  text-decoration: none;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.site-logo:hover { opacity: 0.65; }
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  justify-content: flex-end;
+}
+
+.nav a {
+  text-decoration: none;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+.nav a:hover { opacity: 1; }
+
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: inherit;
+  color: var(--ink);
+  opacity: 0.6;
+  padding: 0;
+  flex-shrink: 0;
+}
+.burger:hover { opacity: 1; }
+
+/* ── Main ──────────────────────────────────────────────────────────────────── */
+.site-main { }
+
+/* ── Stream / posts ────────────────────────────────────────────────────────── */
+.post {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--faint);
+}
+.post:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  font-size: 0.8rem;
+  opacity: 0.55;
+  margin-bottom: 10px;
+}
+
+.post-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.post-title a { text-decoration: none; }
+.post-title a:hover { text-decoration: underline; }
+
+.post-body p { margin-bottom: 12px; }
+.post-body p:last-child { margin-bottom: 0; }
+.post-body h1,
+.post-body h2,
+.post-body h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 24px 0 8px;
+}
+.post-body ul,
+.post-body ol {
+  padding-left: 1.4em;
+  margin-bottom: 12px;
+}
+.post-body blockquote {
+  border-left: 2px solid var(--faint);
+  padding-left: 16px;
+  opacity: 0.7;
+  margin: 16px 0;
+}
+.post-body code {
+  font-family: var(--font);
+  font-size: 0.88em;
+  background: var(--faint);
+  padding: 1px 5px;
+  border-radius: 2px;
+}
+.post-body pre {
+  background: var(--faint);
+  padding: 14px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 16px 0;
+}
+.post-body pre code {
+  background: none;
+  padding: 0;
+}
+.post-body img {
+  margin: 20px 0;
+}
+
+.post-excerpt {
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  text-decoration: none;
+  font-size: 0.88rem;
+}
+.read-more:hover { text-decoration: underline; }
+
+/* ── Tags ──────────────────────────────────────────────────────────────────── */
+.tag {
+  text-decoration: none;
+  opacity: 0.55;
+  font-size: 0.8rem;
+}
+.tag:hover { opacity: 1; }
+
+/* ── Archive ───────────────────────────────────────────────────────────────── */
+.archive-year {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  opacity: 0.5;
+}
+.archive-year:first-child { margin-top: 0; }
+
+.archive-list {
+  list-style: none;
+}
+.archive-list li {
+  margin-bottom: 6px;
+  display: flex;
+  gap: 16px;
+}
+.archive-date {
+  opacity: 0.5;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+/* ── Single post ───────────────────────────────────────────────────────────── */
+.post-header {
+  margin-bottom: 40px;
+}
+.post-header h1 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.back-link {
+  display: inline-block;
+  margin-top: 48px;
+  text-decoration: none;
+  opacity: 0.5;
+  font-size: 0.88rem;
+}
+.back-link:hover { opacity: 1; }
+
+/* ── Footer ────────────────────────────────────────────────────────────────── */
+.site-footer {
+  margin-top: 80px;
+  padding-top: 20px;
+  border-top: 1px solid var(--faint);
+  font-size: 0.8rem;
+  opacity: 0.45;
+}
+
+/* ── Page title (tags, archive) ────────────────────────────────────────────── */
+.page-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  opacity: 0.6;
+}
+
+/* ── Mobile ────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { padding: 0 16px; }
+  .site { padding: 28px 0 60px; }
+  .site-header { margin-bottom: 40px; }
+
+  .nav {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 0 4px;
+    z-index: 100;
+  }
+  .nav.open {
+    display: flex !important;
+  }
+  .nav a { justify-content: flex-start; }
+
+  .burger {
+    display: block !important;
+  }
+}
