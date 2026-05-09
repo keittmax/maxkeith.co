@@ -7,7 +7,7 @@ title: "por qué voy a las carreras?"
 
 [_((originalmente publicado en trailchile))_](http://www.trailchile.cl/por-que-voy-a-las-carreras/)
 
-![1](/posts/[posts]/random/por que voy a las carreras/_1.jpg)
+![1](/media/random/por-que-voy-a-las-carreras/_1.jpg)
 **_(no me acuerdo quien saco esta foto? Mati??)_** todos admirando el Osorno.
 
 ¿Por qué voy a una carrera? Porque me encanta ponerme a prueba con otros realizando una actividad específica, en este caso: correr por los cerros. La competitividad es algo inherente al ser humano y aunque últimamente se le pueda haber atribuido una connotación negativa a esta acción (lo de ser demasiado competitivo en todo sentido), me parece  que es algo totalmente natural querer medirse con el resto y así poner a prueba nuestros límites, aspirando a ser lo mejor que podemos en el camino.

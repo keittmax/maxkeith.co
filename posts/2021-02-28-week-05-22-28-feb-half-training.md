@@ -5,7 +5,7 @@ type: long
 title: "week 05 // 22 - 28 // feb 2021"
 ---
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_5.jpg)
+![1](/media/training-log/training-21k-q1-2021/_5.jpg)
 **_semana tan dura que no saqué ni una sola foto más que esta_**
 
 _//esta semana flojee con mantener el log digital al día, así que todo esta semi re-escrito del log de papel + lo que me acordaba (no mucho)._ 

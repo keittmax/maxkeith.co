@@ -5,7 +5,7 @@ type: long
 title: "week 06 // 01 - 07 // mar 2021"
 ---
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_6.jpg)
+![1](/media/training-log/training-21k-q1-2021/_6.jpg)
 **_del día de descanso, en el san cris. La ironía de que sea un log entrenando para un Half y suba una foto del único día que he tomado la Cleta en más de un mes. Ha. #filmnotdead _**
 
 _// otra semana que estoy casi transcribiendo todo desde el log físico. Cómo que cada vez me gusta más escribir ahí nomas y me esta dando algo de paja mantener esto al día. Ha. 

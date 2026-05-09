@@ -7,7 +7,7 @@ title: "como comenzar a correr en cerro"
 
 [_((originalmente publicado en trailchile))_](http://www.trailchile.cl/como-comenzar-a-correr-en-cerro/)
 
-![1](/posts/[posts]/random/como comenzar a correr en cerro/_1.jpg)
+![1](/media/random/como-comenzar-a-correr-en-cerro/_1.jpg)
 **_Parque Nacional LLullaillaco. II Región de Chile. Foto: Max Keith_**
 
 Por cliché que sea, con el crecimiento exponencial que ha tenido nuestro deporte el último tiempo, nunca esta demás volver a revivir el post de “Comenzar a correr en cerro” y además  ir actualizándolo un poco.
@@ -16,7 +16,7 @@ Primero que todo, me gustaría partir diciendo que para correr en cerro no se re
 
 En el mundo de especialización en el que vivimos ahora, podemos encontrar un montón de equipo de alta gama para el Trail, pero me parece que en un comienzo no vale la pena gastarse un dineral en cosas que ni siquiera estamos seguros de que nos servirán o nos acomodaran. Si estas comenzando en esto del cerro, un equipo básico podrá servirte para dar tus primeros pasos y competir en tus primeras carreras, para luego de un tiempo, comprar cosas que realmente te vayan a ser útiles a la hora de pasar más horas a la semana en el cerro. Desde zapatillas especiales, hasta mochilas de hidratación y ropa adecuada, todo esto queda para una segunda instancia, donde al menos ya estemos algo más convencidos de que queremos seguir progresando en este deporte y además nos planteemos desafíos personales concretos que requieran de una mayor dedicación y preparación.
 
-![1](/posts/[posts]/random/como comenzar a correr en cerro/_2.jpg)
+![1](/media/random/como-comenzar-a-correr-en-cerro/_2.jpg)
 **_Secando las cosas después de una jornada de lluvia. Nada como un camp de trail con los amigos. Foto: Max Keith_**
 
 Otro punto que me parece importante aclarar desde el comienzo, es el hecho de que si bien el deporte se llame “Trail Runing”, en un comienzo puede tener bien poco de running y mucho de walking (caminar) y eso está perfecto. Muchas veces me he topado con gente que se obsesiona por trotar incluso las pendientes más insólitas, cuando el verdadero fin de este deporte es disfrutar de la montaña al ritmo que cada uno considere adecuado. Correr por senderos se trata de ser eficientes en terrenos ‘poco amigables’ y administrar lo mejor posible las fuerzas (sobre todo en el caso de correr Ultras), por eso la importancia de conocerse a uno mismo y tomarse las cosas con calma. Si esto significa caminar más de la cuenta y tomar extrema precaución en las bajadas, que así sea y no hay nada de malo: todos pasamos por eso.
@@ -27,5 +27,5 @@ Si estás pensando en meterte en el Trail Running, no lo hagas con miedo ni con 
 
 Finalmente, hago la invitación a que todos hagamos crecer aún más nuestra pequeña comunidad pero sin generar traumas, vale decir; incorporar a las personas nuevas con experiencias amigables y no traumáticas. Aprovechemos que contamos con un sinfín de senderos para todos los niveles y seamos capaces de transmitir que al final del día, lo que importa es estar al aire libre haciendo lo que nos gusta más que estar vanagloriándonos de lo que hacemos.
 
-![1](/posts/[posts]/random/como comenzar a correr en cerro/_3.jpg)
+![1](/media/random/como-comenzar-a-correr-en-cerro/_3.jpg)
 **_Pocas cosas se comparan a la satisfacción de cruzar la meta. Foto: Max Keith_**

@@ -9,7 +9,7 @@ title: "week 01 // 25 - 31 // ene 2021"
 
 -----------------------------------------------------------
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_1.jpg)
+![1](/media/training-log/training-21k-q1-2021/_1.jpg)
 **[el joven callejeando y el little otoño que tuvimos]**
 
 
@@ -70,5 +70,5 @@ Entrenar menos de 10h a la semana me parece **bizarro** pero ahora que lo pienso
 
 ** hay un par de pedaleos ninjas, pero como fueron más commute y cosas así, no a lugar colocarlos acá realmente. 
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_11.jpg)
+![1](/media/training-log/training-21k-q1-2021/_11.jpg)
 **[seen on the run tuesday]**

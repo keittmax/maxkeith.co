@@ -5,7 +5,7 @@ type: long
 title: "week 02 // 01 - 07 // feb 2021"
 ---
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_2.jpg)
+![1](/media/training-log/training-21k-q1-2021/_2.jpg)
 **_La Dani corriendo por el campo, en una mañana otoñal de verano. Literal_**
 
 
@@ -72,8 +72,8 @@ Segunda semana en el bolsillo. De verdad pensé que la sensación de periostitis
 
 **Distancia:** 123,5k
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_21.jpg)
+![1](/media/training-log/training-21k-q1-2021/_21.jpg)
 **_la cago que salió malo este suunto_**
 
-![1](/posts/[training log]/training - 21k - Q1 - 2021/_22.jpg)
+![1](/media/training-log/training-21k-q1-2021/_22.jpg)
 **_no puedo creer que este llevando (y tomando) liquido de estas botellitas para un largo de 2 horas_**

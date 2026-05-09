@@ -5,7 +5,7 @@ type: long
 title: "multi-largo // placa verde"
 ---
 
-![el cajón](/posts/[posts]/cerros//multi-largo/_cajon.jpg)
+![el cajón](/media/cerros/multi-largo/_cajon.jpg)
 
 **_Léase como trail runner, o como cualquier cosa menos un escalador. Va a tener más sentido toda la historia._**
 
@@ -36,7 +36,7 @@ No estaba en la mejor posición (físicamente hablando) para ponerme a sobre-ana
 
 “No hay ninguna posibilidad real de que llegue arriba de esto”. Eso era lo único que pensaba en los metros finales del 1er largo.
 
-![el cajón](/posts/[posts]/cerros//multi-largo/_gonza.jpg)
+![el cajón](/media/cerros/multi-largo/_gonza.jpg)
 **_Mi partner (de 3ro) terminando el 1er largo._**
 
 En lo que parecer una eternidad, el 3ro termina la ruta y tenemos nuestra primera -breve- clase de cómo se hace una “reunión”, cómo nos tenemos que ‘asegurar’ con nuestras ‘lineas de vida’ cada vez que lleguemos a este punto y qué chucha pasa a continuación; cuándo nuestro abridor empieza a escalar colgado desde la pared.
@@ -54,7 +54,7 @@ Final del 2do largo y miro al “Pelao”(más conocido como “El Abridor” en
 
 W-T-F :
 
-![el cajón](/posts/[posts]/cerros//multi-largo/_miedo.jpg)
+![el cajón](/media/cerros/multi-largo/_miedo.jpg)
 
 **_Esta era mi pequeña terraza al final del 2do largo._**
 
@@ -72,7 +72,7 @@ Obviamente, no tenemos ninguna posibilidad real de sacar la ruta completa, pero 
 A continuación; clase express de rapel y vamos bajando que ya se hace tarde y el viento acá arriba no perdona. La mala idea de subir con media botella de agua para los 3, tampoco ayudo a que nos pudiéramos quedar con la calma disfrutando el paisaje allá arriba.
 Image for post
 
-![el cajón](/posts/[posts]/cerros//multi-largo/_rapel.jpg)
+![el cajón](/media/cerros/multi-largo/_rapel.jpg)
 **_Misión rapel._*
 
 Una hora y media después de haber empezado la faena de rapelear y ya estábamos en el suelo con una jornada épica en el bolsillo. Definitivamente mi día más memorables en lo que va del verano. Totalmente alucinado por lo que acabábamos de hacer y eso que ni siquiera alcanzamos a hacer la mitad de la pared (viendo el topo después nos dimos cuenta de que en verdad habíamos hecho 4 largos). Ahora, lo único que quiero es volver a subirme en ese enorme pedazo de roca otra vez…pero puta que me falta.

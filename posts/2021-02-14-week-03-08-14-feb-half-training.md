@@ -66,5 +66,5 @@ Tengo un poco de miedo de la semana que se viene por qué tocan repes de 400 con
 
 **Distancia:** 125,87k.
 
-![1](/posts/[training log]/Training - 21k - Q1 - 2021/_3.jpg)
+![1](/media/training-log/training-21k-q1-2021/_3.jpg)
 **_Foto de la clásica "pasada por atrás" en el maicillo detrás de las torres_**
