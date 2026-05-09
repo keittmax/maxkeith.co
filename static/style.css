@@ -238,6 +238,12 @@ img {
   opacity: 0.6;
 }
 
+/* ── About ─────────────────────────────────────────────────────────────────── */
+.about-page { display: flex; flex-direction: column; gap: 32px; }
+.about-photo img { width: 100%; max-width: 480px; display: block; }
+.about-photo figcaption { margin-top: 8px; font-size: 12px; opacity: 0.5; }
+.about-text { display: flex; flex-direction: column; gap: 10px; line-height: 1.7; }
+
 /* ── Mobile ────────────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   body { padding: 0 16px; }

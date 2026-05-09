@@ -223,6 +223,28 @@ def build_archive(posts: list):
         posts_html=html,
     ))
 
+def build_about():
+    content = """
+<div class="about-page">
+  <figure class="about-photo">
+    <img src="/media/about/cover.jpg" alt="max keith">
+    <figcaption>llegando a la meta de Kima22</figcaption>
+  </figure>
+  <div class="about-text">
+    <p>Hola.</p>
+    <p><em>Este es mi <strong>cyber baúl</strong> donde guardo los .txt y .jpeg de las cosas que he hecho.</em></p>
+    <p>∞</p>
+  </div>
+</div>
+"""
+    out_dir = OUTPUT_DIR / "about"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "index.html").write_text(render_page("index",
+        page_title=f"about — {SITE_TITLE}",
+        page_heading="",
+        posts_html=content,
+    ))
+
 def copy_static():
     if STATIC_DIR.exists():
         shutil.copytree(STATIC_DIR, OUTPUT_DIR / "static", dirs_exist_ok=True)
@@ -252,6 +274,7 @@ def main():
     build_posts(posts)
     build_tags(posts)
     build_archive(posts)
+    build_about()
     copy_static()
 
     print(f"  built → {OUTPUT_DIR}/")
