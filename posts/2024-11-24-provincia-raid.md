@@ -28,14 +28,14 @@ Antes de contar un poco el día con mi relato y un par de fotos analogas, tengo 
 
 La estupidez del día comenzó partiendo en el frontis de mi departamento a las 6:31.  Pepes me dijo que (para variar) había despertado mal del estomago y que había traído confort por si acaso. lo cual Acto seguido logré que lo botara en el primer basurero que nos encontramos, por qué no era parte de las _reglas_ el llevar cositas por si acaso. _(días después me vine a enterar que anduvo cargando un segundo rollo de confort que lo termino salvando una vez en el cerrito)_
 
-![1](/posts/[posts]/recaps/provincia raid/_0A.jpg)
+![1](/media/recaps/provincia-raid/_0A.jpg)
 _Pasando por el paso nivel de Escuela Militar. No recuerdo haber corrido o caminado antes por ahí._
 
 Empezamos a subir trotando con toda la calma por Apoquindo dirección a San Carlos. Yo estaba medio preocupado en general por el tema del calor y por qué tenía las dos piernas como palo. _(Cuando será el día que mis piernas esten en sintonía con lo que quiere hacer mi cabeza, ah?)_ 
 
 No hubo necesidad de parar en ningún lado a comprar nada (obvio). Estábamos demasiados frescos. Hasta salió un paseo involuntario por la iglesia (?) (jesuita?) al final de los Dominicos. 
 
-![1](/posts/[posts]/recaps/provincia raid/_5 copy.jpg)
+![1](/media/recaps/provincia-raid/_5 copy.jpg)
 _Paseando por los dominicos_
 
 // Si bien inicialmente había planteado la idea de agregarle aún más cuota de aventura al día intentando subir por la *‘directissima’* desde el Portezuelo de las Vizcachas, finalmente terminé  descartando esa idea (menos mal!) pensando en que el día ya iba a ser lo suficientemente duro como para agregarle + cerros (Morro Las Papas y Alto Las Vizcachas) + agregar un segmento que la verdad es bastante pitilla. 
@@ -50,11 +50,11 @@ Bajamos hasta pillar el *Upa* (este detour nos costó su par de kms) y nos abast
 
 Creo que Pepes se terminó comprando un agua de 500 + vital de litro + un waffle + un snicker? 
 
-![1](/posts/[posts]/recaps/provincia raid/_9 copy.jpg)
+![1](/media/recaps/provincia-raid/_9 copy.jpg)
 
 Nos tomamos esos 500ml ahí mismo en el parking del *Upa* y ya que estabamos más cargados hacia el Sur, decidimos trotar hasta la entrada de Bulnes Correa para entrar al cerro y abortar la misión de entrar por Av La Plaza.
 
-![1](/posts/[posts]/recaps/provincia raid/_11 copy.jpg)
+![1](/media/recaps/provincia-raid/_11 copy.jpg)
 
 _Conejeando_ por San Carlos y ya cerca de la entrada por Bulnes Correa nos pillamos otra Copec (meh) que hubiese sido el re-supply ideal si hubiésemos sabido, pero esto era justamente parte de la idea de no mapear nada en la previa. 
  
@@ -66,7 +66,7 @@ Empezamos a subir vía Monolito al Cruce y acá empezó el sol a pegarnos por pr
 
 Pepes estaba como entre ido-cansado-no-cafeinado y yo trataba de animarlo diciendole que comiera algo más y tomara agua. También le mentía sin asco diciendole que; era un unico push/esfuerzo hasta el portezuelo y que después ‘la pega ya estaba hecha’ hasta la cumbre. Haha. La cago las estupideces que uno dice para animar a alguien.
 
-![1](/posts/[posts]/recaps/provincia raid/_16 copy.jpg)
+![1](/media/recaps/provincia-raid/_16 copy.jpg)
 
 Una vez ya en el sendero al Provincia (aka el valle suizo?), le dije a Pepe que a ese pace no íbamos a lograrla. Que nos íbamos a quedar sin agua ni comida, así que, que si no _‘despabilaba’_ (en el buen sentido), mejor separarnos y que nos pillabamos de vuelta bajando. 
 
@@ -84,21 +84,21 @@ Hice con calma la pasada de rocas y después me tiré directo para arriba por la
 
 Llegó arriba igual medio ido, porque no es que el kitkat fuera suficiente como para levantarme full. Miro mi reloj (2h37 el split de subida,[[4h20 total desde la casa]] qué después de todo no es nada de malo considerando el relleno extra desde Bulnes Correa + las veces que tuve que esperar a Pepes + el bonk que me había pegado fuerte por al menos 10 minutos), marco el lap y le pido a un par de wns que estaban arriba que me tiraran un par de fotos con la camarita. 
 
-![1](/posts/[posts]/recaps/provincia raid/_19 copy.jpg)
+![1](/media/recaps/provincia-raid/_19 copy.jpg)
 _Crappy foto cumbrera y con el filtro lomo delirante ad-hoc al momento._
 
 Sin perder mucho tiempo arriba (por qué de verdad igual ya estaba preocupado de en qué condiciones iba a llegar abajo) empiezo a bajar y me decido abrir mi 2do kitkat y darle uno buenos sorbos de agua a mi botellita. Sabía que iba a andar bien pitilla, pero mejor estar algo más despierto en esta primera parte de la bajada.
 
 Baje con toda la calma por qué no me sentía muy bien y no estaba ni ahí con caerme tampoco. Pase el paso de rocas de vuelta y al ratito veo aparecer a Pepes. 
 
-![1](/posts/[posts]/recaps/provincia raid/_19A.jpg)
+![1](/media/recaps/provincia-raid/_19A.jpg)
 _Foto de Pepe cuando me vio aparecer por las rocas._
 
-![1](/posts/[posts]/recaps/provincia raid/_20A.jpg)
+![1](/media/recaps/provincia-raid/_20A.jpg)
 
 El wn me dice que; "menos mal que era yo, por qué ya no quería seguir subiendo (haha) y que no le quedaba agua" (lo cual resultó ser mentira) y yadayadayada.
 
-![1](/posts/[posts]/recaps/provincia raid/_20 copy.jpg)
+![1](/media/recaps/provincia-raid/_20 copy.jpg)
 _Acá mintiendome a la cara, diciendome lo mal que se sentía._
 
 Empezamos a bajar juntos, no sin antes vivir un ‘incidente’ con un wn que iba subiendo y no había querido saludar a Pepes (según su versión de la historia) y que no halló nada mejor que webearlo porque se había tenido que dar media vuelta antes de la cumbre (HAHAHA).
@@ -114,7 +114,7 @@ En eso estábamos cuando la azúcar me volvió a pegar y logré empezar a bajar 
 
 No me di mucha cuenta cuando llegamos hasta arriba del Guayacan. A mi todavía me quedaba un poco de agua pero ya sentía como por dentro estaba secándome como una pasa.  El calor ya no perdonaba tampoco. 
 
-![1](/posts/[posts]/recaps/provincia raid/_21 copy.jpg)
+![1](/media/recaps/provincia-raid/_21 copy.jpg)
 _Creo que esto fue bajando hacia el Guayacan._
 
 Bajando el Guayacan Pepes no aguanto más y le rogó por agua a unas personas. (yo no vi esto) y un poco más allá, cuando nos cruzamos con la canaleta, Pepes no dudó en llenar su botella con un poco de esa agua, qué yo en lo personal, no hubiese tomado ni cagando. 
@@ -125,14 +125,14 @@ Este segmento se hizo eterno y si bien los 2 estábamos corriendo bien decente, 
 
 El trote penoso hasta el Fork de Av. La Plaza fue una real tortura para Pepes. Debo reconocer que me reí harto en esta parte. Yo también estaba pal pico, pero digamos que hasta casi echaba algo de demenos estar así de roto por dentro (puta que somos raros wn). 
 
-![1](/posts/[posts]/recaps/provincia raid/_21A.jpg)
+![1](/media/recaps/provincia-raid/_21A.jpg)
 _Riendome de Pepes creo. Foto de Pepes_
 
 Llegamos al glorioso Fork. Yo aque una SanPe (obvio) + croissant (WTF, no se me ocurrió algo más seco?) y una cagada de stroopwafel chico. Yo no alcance a siquiera salir del Fork y Pepes ya se había bajado todo lo que se había comprado para tomar y comer. 
 
 Nos sentamos un rato en el pasto (así de cagado estaba, que no quise comer y tomar comenzando a bajar) y todo lo que comí y tomé me cayó como una bomba al estómago. 
 
-![1](/posts/[posts]/recaps/provincia raid/_25 copy.jpg)
+![1](/media/recaps/provincia-raid/_25 copy.jpg)
 _Pepes bajandose su 2da San Pe en menos de 2 minutos._
 
 Empezamos a bajar por San Carlos con el trote más penoso de la historia, pero algo más felices de por lo menos estar en el pavimento y con posibilidades de encontrar agua. En esa estábamos cuando cachamos que íbamos por una calle que nos iba a botar por un lado que no queríamos, así que terminamos de cortar por la peor vereda del mundo (según Pepes yo elegí siempre las peores veredas y cortes) y ese segmento en específico, debe haber sido más sufrido que todo la subida al Provincia (jaja). 
@@ -143,7 +143,7 @@ La salida de San Carlos se me hizo una real eternidad y tenía el estómago hech
 
 Llegando al semáforo que cruza desde Los Dominicos a Av. Apoquindo creo que llegué a mi punto más bajo de todo el día. Me senté en un bloque de cemento esperando la verde del semáforo y por unos segundos dudé si iba a ser capaz de volver a pararme a correr. Me sentía como la mierda. Creí que hace años no me sentía tan mal de hecho. 
 
-![1](/posts/[posts]/recaps/provincia raid/_27A.jpg)
+![1](/media/recaps/provincia-raid/_27A.jpg)
 _Lo más mal que me he sentido en años. Menos mal no se me veía la cara haha. Foto de Pepe._
 
 Empezamos a bajar (pagaría por ver el video de dos wns trotando por Av Apoquindo como lesionados de guerra) y de a poco empecé a despabilar. Pude tomar un poco más de agua y de a poco empecé a sentirme mejo, pero todavía mal dentro de todo. 
@@ -152,22 +152,22 @@ A la altura del Apumanque encontré que llevábamos una eternidad trotando, pero
 
 En eso estábamos cuando llegamos a Escuela y decidimos pasar por abajo (en la mañana habíamos cruzado por la veredita del paso nivel). Meterse en la especie de mall subterráneo de Escuela fue de las experiencias más _bizarritas_ que he vivido este año. Medio delirante y completamente ido. Haha. 
 
-![1](/posts/[posts]/recaps/provincia raid/_31A.jpg)
+![1](/media/recaps/provincia-raid/_31A.jpg)
 _Momento sicodélico. Foto de Pepe_
 
 Pepes estaba trotando bien decente y yo iba a todo lo que daba. No podía apretar más. Estaba cagadisimo.
 
 Ya llegando a Tobalaba empecé a sentir que la íbamos a lograr y me relaje un poco. Fue chistoso igual pasar por Provi un día sábado, peak de gente y yo hecho mierda camino a mi casa. 
 
-![1](/posts/[posts]/recaps/provincia raid/_27 copy.jpg)
+![1](/media/recaps/provincia-raid/_27 copy.jpg)
 
 Terminamos en el paseo _Magnere_, qué tiene harto más caché para ser el lugar de término de una aventura que una simple calle. 
 
-![1](/posts/[posts]/recaps/provincia raid/_31 copy.jpg)
+![1](/media/recaps/provincia-raid/_31 copy.jpg)
 
 Estaba totalmente roto, pero chocho. Había salido a buscar una aventurilla a los lugares de siempre y lo había conseguido.
 
-![1](/posts/[posts]/recaps/provincia raid/_29 copy.jpg)
+![1](/media/recaps/provincia-raid/_29 copy.jpg)
 
 //////////////////////////////////////////////////////////////////
 
@@ -193,4 +193,4 @@ Estaba totalmente roto, pero chocho. Había salido a buscar una aventurilla a lo
 
 //Mierda, fue más largo de lo que pensé. 
 
-![1](/posts/[posts]/recaps/provincia raid/_35 copy.jpg)
+![1](/media/recaps/provincia-raid/_35 copy.jpg)
