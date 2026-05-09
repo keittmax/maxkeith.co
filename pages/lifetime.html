@@ -32,11 +32,23 @@ a:hover { text-decoration: underline; }
 /* ── header ── */
 .site-header {
   display: flex;
-  justify-content: flex-end;
   align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
   padding: 20px 64px;
+  position: relative;
 }
-.site-logo { font-size: 13px; font-weight: normal; }
+.site-logo { font-size: 13px; font-weight: 600; text-decoration: none; flex-shrink: 0; }
+.site-logo:hover { opacity: 0.65; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; justify-content: flex-end; }
+.site-nav a { font-size: 13px; text-decoration: none; opacity: 0.6; white-space: nowrap; color: var(--ink); }
+.site-nav a:hover { opacity: 1; }
+.site-burger {
+  display: none; background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 13px; color: var(--ink);
+  opacity: 0.6; padding: 0; flex-shrink: 0;
+}
+.site-burger:hover { opacity: 1; }
 
 /* ── page ── */
 .page {
@@ -49,6 +61,14 @@ a:hover { text-decoration: underline; }
 
 @media (max-width: 960px) {
   .site-header { padding: 20px 24px; }
+  .site-nav {
+    display: none !important;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg); flex-direction: column;
+    gap: 14px; padding: 20px 24px 4px; z-index: 100;
+  }
+  .site-nav.open { display: flex !important; }
+  .site-burger { display: block !important; }
   .page {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -224,7 +244,18 @@ function App() {
   return (<>
     {/* ── Header ── */}
     <header className="site-header">
-      <a href="https://maxkeith.co" className="site-logo">max keith</a>
+      <a href="/" className="site-logo"><strong>max keith</strong></a>
+      <button className="site-burger" onClick={() => {
+        const nav = document.querySelector('.site-nav');
+        const open = nav.classList.toggle('open');
+        document.querySelector('.site-burger').textContent = open ? '[ close ]' : '[ menu ]';
+      }}>[ menu ]</button>
+      <nav className="site-nav">
+        <a href="/posts/">posts</a>
+        <a href="/archive/">archive</a>
+        <a href="/tags/">tags</a>
+        <a href="/lifetime">lifetime</a>
+      </nav>
     </header>
 
     {/* ── Two-column page ── */}
