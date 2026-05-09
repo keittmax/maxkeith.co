@@ -25,6 +25,13 @@ MANUAL_ENTRIES = [
         "elev":  596.0,
         "is_tt": False,
     },
+    {
+        "date":  pd.Timestamp("2024-08-23"),
+        "title": "TSP CHX - 5th",
+        "dist":  86.2,
+        "elev":  1654.0,
+        "is_tt": False,
+    },
 ]
 
 # Group by year
