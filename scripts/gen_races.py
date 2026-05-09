@@ -15,10 +15,39 @@ df = pd.read_csv(CSV, dayfirst=True, parse_dates=["Date"])
 races = df[df["Session Purpose"].isin(["Race", "Test"])].copy()
 races = races.sort_values("Date", ascending=False)
 
+# ── Manual entries: relay races or multi-segment events not tagged Race/Test ──
+# Each dict needs: date (Timestamp), title (str), dist (float), elev (float), is_tt (bool)
+MANUAL_ENTRIES = [
+    {
+        "date":  pd.Timestamp("2024-11-29"),
+        "title": "TSP ATA (relay)",
+        "dist":  38.6,
+        "elev":  596.0,
+        "is_tt": False,
+    },
+]
+
 # Group by year
 by_year = defaultdict(list)
 for _, r in races.iterrows():
     by_year[r["Date"].year].append(r)
+
+# Inject manual entries, sorted into the right position within each year
+for entry in MANUAL_ENTRIES:
+    year = entry["date"].year
+    # Build a fake Series-like object so the render loop can handle it uniformly
+    row = pd.Series({
+        "Date":           entry["date"],
+        "Session Purpose": "Test" if entry["is_tt"] else "Race",
+        "Title":          entry["title"],
+        "Distance (km)":  entry["dist"],
+        "Elevation Gain": entry["elev"],
+    })
+    by_year[year].append(row)
+
+# Re-sort each year's list by date descending
+for year in by_year:
+    by_year[year].sort(key=lambda r: r["Date"], reverse=True)
 
 def fmt_dist(v):
     try: return f"{float(v):.1f}"
@@ -146,6 +175,7 @@ td {{ padding: 7px 0; vertical-align: middle; }}
       <a href="/archive/">archive</a>
       <a href="/tags/">tags</a>
       <a href="/currently/">currently</a>
+      <a href="/races/">races</a>
       <a href="/stats">stats</a>
       <a href="/about/">about</a>
     </nav>
