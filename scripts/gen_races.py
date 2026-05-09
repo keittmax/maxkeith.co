@@ -20,8 +20,8 @@ races = races.sort_values("Date", ascending=False)
 MANUAL_ENTRIES = [
     {
         "date":  pd.Timestamp("2024-11-29"),
-        "title": "TSP ATA (relay)",
-        "dist":  38.6,
+        "title": "TSP ATA Relay - 1st",
+        "dist":  108.0,
         "elev":  596.0,
         "is_tt": False,
     },
