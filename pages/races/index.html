@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>races &amp; tt — max keith</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:    #e1cdcb;
+  --ink:   #718858;
+  --dim:   #91a07a;
+  --faint: #d0bcba;
+  --font:  'IBM Plex Mono', 'Courier New', Courier, monospace;
+}
+html { font-size: 15px; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  min-height: 100vh;
+  padding: 0 24px;
+}
+a { color: var(--ink); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Header / nav ── */
+.site { max-width: 700px; margin: 0 auto; padding: 40px 0 80px; }
+.site-header {
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 52px; position: relative;
+}
+.site-logo { font-size: 14px; font-weight: 600; letter-spacing: .03em; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 4px 20px; justify-content: flex-end; }
+.site-nav a { font-size: 13px; opacity: 0.6; white-space: nowrap; }
+.site-nav a:hover { opacity: 1; text-decoration: none; }
+.burger {
+  display: none; background: none; border: none; cursor: pointer;
+  font: inherit; color: var(--ink); font-size: 13px; padding: 0;
+}
+
+/* ── Page heading ── */
+.page-heading {
+  font-size: 11px; font-weight: 600; letter-spacing: .12em;
+  text-transform: uppercase; opacity: 0.45; margin-bottom: 28px;
+}
+
+/* ── Table ── */
+table {
+  width: 100%; border-collapse: collapse; font-size: 13px; line-height: 1.5;
+}
+tr { border-bottom: 1px solid var(--faint); }
+td { padding: 7px 0; vertical-align: middle; }
+
+.year-row td {
+  padding-top: 28px; padding-bottom: 6px;
+  font-size: 11px; font-weight: 600; letter-spacing: .08em;
+  opacity: 0.45; border-bottom: 1px solid var(--faint);
+}
+.tt-row { opacity: 0.55; font-style: italic; }
+
+.col-date  { width: 52px; opacity: 0.6; white-space: nowrap; }
+.col-name  { padding-left: 12px; }
+.col-dist  { text-align: right; white-space: nowrap; padding-left: 12px; opacity: 0.75; }
+.col-elev  { text-align: right; white-space: nowrap; padding-left: 16px; opacity: 0.5; min-width: 72px; }
+
+.tt-tag {
+  display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase; opacity: 0.6; border: 1px solid currentColor;
+  padding: 0 4px; margin-right: 7px; vertical-align: middle; font-style: normal;
+  line-height: 1.6; border-radius: 2px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  body { padding: 0 16px; }
+  .col-elev { display: none; }
+  .site-nav {
+    display: none !important; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg); flex-direction: column; gap: 14px;
+    padding: 20px 0 4px; z-index: 100;
+  }
+  .site-nav.open { display: flex !important; }
+  .burger { display: block !important; }
+}
+</style>
+</head>
+<body>
+<div class="site">
+  <header class="site-header">
+    <a href="/" class="site-logo"><strong>max keith</strong></a>
+    <button class="burger" onclick="var n=document.querySelector('.site-nav');var o=n.classList.toggle('open');this.textContent=o?'[ close ]':'[ menu ]';">[ menu ]</button>
+    <nav class="site-nav">
+      <a href="/posts/">posts</a>
+      <a href="/archive/">archive</a>
+      <a href="/tags/">tags</a>
+      <a href="/currently/">currently</a>
+      <a href="/stats">stats</a>
+      <a href="/about/">about</a>
+    </nav>
+  </header>
+
+  <p class="page-heading">races &amp; tt</p>
+
+  <table>
+    <tr class="year-row"><td colspan="4">2026</td></tr>
+<tr>
+  <td class="col-date">04/19</td>
+  <td class="col-name">Desafio Gran Santiago</td>
+  <td class="col-dist">86.5 km</td>
+  <td class="col-elev">↑ 2,375</td>
+</tr>
+<tr>
+  <td class="col-date">03/29</td>
+  <td class="col-name">Stgo 21k</td>
+  <td class="col-dist">21.1 km</td>
+  <td class="col-elev">↑ 63</td>
+</tr>
+<tr class="year-row"><td colspan="4">2025</td></tr>
+<tr class="tt-row">
+  <td class="col-date">12/20</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Provincia #3 (car2car)</td>
+  <td class="col-dist">19.1 km</td>
+  <td class="col-elev">↑ 1,862</td>
+</tr>
+<tr>
+  <td class="col-date">10/11</td>
+  <td class="col-name">Gravel Del Cobre</td>
+  <td class="col-dist">86.3 km</td>
+  <td class="col-elev">↑ 1,516</td>
+</tr>
+<tr>
+  <td class="col-date">09/13</td>
+  <td class="col-name">Saga Gravel</td>
+  <td class="col-dist">145.9 km</td>
+  <td class="col-elev">↑ 3,035</td>
+</tr>
+<tr>
+  <td class="col-date">09/06</td>
+  <td class="col-name">Fanrun</td>
+  <td class="col-dist">15.1 km</td>
+  <td class="col-elev">↑ 1,010</td>
+</tr>
+<tr>
+  <td class="col-date">09/06</td>
+  <td class="col-name">Fanride</td>
+  <td class="col-dist">51.4 km</td>
+  <td class="col-elev">↑ 859</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">06/27</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Carbón #24 - 29:56 😈</td>
+  <td class="col-dist">3.6 km</td>
+  <td class="col-elev">↑ 673</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">06/03</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Green</td>
+  <td class="col-dist">13.9 km</td>
+  <td class="col-elev">↑ 913</td>
+</tr>
+<tr>
+  <td class="col-date">05/18</td>
+  <td class="col-name">Maratón de Santiago 25’</td>
+  <td class="col-dist">42.3 km</td>
+  <td class="col-elev">↑ 185</td>
+</tr>
+<tr>
+  <td class="col-date">05/09</td>
+  <td class="col-name">Alley Ran</td>
+  <td class="col-dist">8.4 km</td>
+  <td class="col-elev">↑ 151</td>
+</tr>
+<tr>
+  <td class="col-date">04/12</td>
+  <td class="col-name">Andes Mountain Pintor - 5th</td>
+  <td class="col-dist">15.7 km</td>
+  <td class="col-elev">↑ 1,364</td>
+</tr>
+<tr>
+  <td class="col-date">04/11</td>
+  <td class="col-name">VK Falsa Parva - 4th</td>
+  <td class="col-dist">3.5 km</td>
+  <td class="col-elev">↑ 853</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">02/22</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Bike Park - Bismarck - Bike Park</td>
+  <td class="col-dist">25.9 km</td>
+  <td class="col-elev">↑ 2,602</td>
+</tr>
+<tr class="year-row"><td colspan="4">2024</td></tr>
+<tr class="tt-row">
+  <td class="col-date">07/19</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Manquehue #01 😮‍💨</td>
+  <td class="col-dist">6.7 km</td>
+  <td class="col-elev">↑ 1,016</td>
+</tr>
+<tr>
+  <td class="col-date">07/07</td>
+  <td class="col-name">7ma Fecha CX - Peñalolen</td>
+  <td class="col-dist">20.1 km</td>
+  <td class="col-elev">↑ 155</td>
+</tr>
+<tr>
+  <td class="col-date">03/02</td>
+  <td class="col-name">FanRan 4 horas</td>
+  <td class="col-dist">40.5 km</td>
+  <td class="col-elev">↑ 1,640</td>
+</tr>
+<tr class="year-row"><td colspan="4">2023</td></tr>
+<tr>
+  <td class="col-date">11/21</td>
+  <td class="col-name">TSP ATA - Solo</td>
+  <td class="col-dist">297.0 km</td>
+  <td class="col-elev">↑ 0</td>
+</tr>
+<tr>
+  <td class="col-date">11/20</td>
+  <td class="col-name">TSP ATA - Solo</td>
+  <td class="col-dist">188.1 km</td>
+  <td class="col-elev">↑ 1,985</td>
+</tr>
+<tr>
+  <td class="col-date">10/08</td>
+  <td class="col-name">Pampa Perdiz - DQ</td>
+  <td class="col-dist">33.9 km</td>
+  <td class="col-elev">↑ 1,932</td>
+</tr>
+<tr>
+  <td class="col-date">06/17</td>
+  <td class="col-name">Putaendo 30k - 4to</td>
+  <td class="col-dist">33.4 km</td>
+  <td class="col-elev">↑ 1,353</td>
+</tr>
+<tr>
+  <td class="col-date">05/14</td>
+  <td class="col-name">Maratón de Santiago - DNF</td>
+  <td class="col-dist">28.8 km</td>
+  <td class="col-elev">↑ 181</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">04/22</td>
+  <td class="col-name"><span class="tt-tag">TT</span>5K TT</td>
+  <td class="col-dist">5.0 km</td>
+  <td class="col-elev">↑ 36</td>
+</tr>
+<tr>
+  <td class="col-date">04/16</td>
+  <td class="col-name">21k - SCL</td>
+  <td class="col-dist">21.2 km</td>
+  <td class="col-elev">↑ 67</td>
+</tr>
+<tr class="year-row"><td colspan="4">2022</td></tr>
+<tr class="tt-row">
+  <td class="col-date">12/18</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Co Bandera</td>
+  <td class="col-dist">5.8 km</td>
+  <td class="col-elev">↑ 492</td>
+</tr>
+<tr>
+  <td class="col-date">08/28</td>
+  <td class="col-name">Trofeo Kima</td>
+  <td class="col-dist">47.4 km</td>
+  <td class="col-elev">↑ 3,569</td>
+</tr>
+<tr>
+  <td class="col-date">06/05</td>
+  <td class="col-name">Gravel Prix Maglianera</td>
+  <td class="col-dist">81.2 km</td>
+  <td class="col-elev">↑ 1,896</td>
+</tr>
+<tr>
+  <td class="col-date">05/08</td>
+  <td class="col-name">Maratón de Santiago</td>
+  <td class="col-dist">42.2 km</td>
+  <td class="col-elev">↑ 196</td>
+</tr>
+<tr>
+  <td class="col-date">03/12</td>
+  <td class="col-name">KMV El Ingenio - LSE </td>
+  <td class="col-dist">4.7 km</td>
+  <td class="col-elev">↑ 1,026</td>
+</tr>
+<tr class="year-row"><td colspan="4">2021</td></tr>
+<tr class="tt-row">
+  <td class="col-date">12/13</td>
+  <td class="col-name"><span class="tt-tag">TT</span>🙃 KOM Bandera</td>
+  <td class="col-dist">13.4 km</td>
+  <td class="col-elev">↑ 649</td>
+</tr>
+<tr>
+  <td class="col-date">09/19</td>
+  <td class="col-name">Qualy Sprint</td>
+  <td class="col-dist">0.5 km</td>
+  <td class="col-elev">↑ 23</td>
+</tr>
+<tr>
+  <td class="col-date">09/19</td>
+  <td class="col-name">Final Sprint</td>
+  <td class="col-dist">0.4 km</td>
+  <td class="col-elev">↑ 23</td>
+</tr>
+<tr>
+  <td class="col-date">09/18</td>
+  <td class="col-name">Long Distance - Nevados de Vilcun</td>
+  <td class="col-dist">15.6 km</td>
+  <td class="col-elev">↑ 1,177</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">06/13</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Queen Stage 2021 - Manq y Carbon x2</td>
+  <td class="col-dist">15.5 km</td>
+  <td class="col-elev">↑ 1,990</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">05/26</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Le stage 02</td>
+  <td class="col-dist">12.9 km</td>
+  <td class="col-elev">↑ 641</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">05/20</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Prologue - Manq #2</td>
+  <td class="col-dist">8.0 km</td>
+  <td class="col-elev">↑ 922</td>
+</tr>
+<tr class="year-row"><td colspan="4">2020</td></tr>
+<tr>
+  <td class="col-date">03/07</td>
+  <td class="col-name">VK Lo Valdes. 2do.</td>
+  <td class="col-dist">4.4 km</td>
+  <td class="col-elev">↑ 958</td>
+</tr>
+<tr class="year-row"><td colspan="4">2019</td></tr>
+<tr>
+  <td class="col-date">08/04</td>
+  <td class="col-name">Long Race 3ra Fecha. 2do lugar.</td>
+  <td class="col-dist">9.3 km</td>
+  <td class="col-elev">↑ 862</td>
+</tr>
+<tr>
+  <td class="col-date">08/03</td>
+  <td class="col-name">Vertical Race Co. Colorado. 1ro. #OUCH.</td>
+  <td class="col-dist">2.9 km</td>
+  <td class="col-elev">↑ 520</td>
+</tr>
+<tr>
+  <td class="col-date">07/06</td>
+  <td class="col-name">Vertical Race. 1ra Fecha Campeonato de Rando. </td>
+  <td class="col-dist">2.1 km</td>
+  <td class="col-elev">↑ 470</td>
+</tr>
+<tr>
+  <td class="col-date">07/06</td>
+  <td class="col-name">Sprint Race. 1ra Fecha Campeonato de Rando. </td>
+  <td class="col-dist">0.8 km</td>
+  <td class="col-elev">↑ 48</td>
+</tr>
+<tr>
+  <td class="col-date">06/29</td>
+  <td class="col-name">Olympus Marathon. #31. Meh.</td>
+  <td class="col-dist">40.7 km</td>
+  <td class="col-elev">↑ 3,095</td>
+</tr>
+<tr>
+  <td class="col-date">06/28</td>
+  <td class="col-name">KMV Olympus. #8. </td>
+  <td class="col-dist">3.6 km</td>
+  <td class="col-elev">↑ 838</td>
+</tr>
+<tr>
+  <td class="col-date">06/15</td>
+  <td class="col-name">Livigno SkyMarathon 2019. #39</td>
+  <td class="col-dist">35.5 km</td>
+  <td class="col-elev">↑ 2,361</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">03/02</td>
+  <td class="col-name"><span class="tt-tag">TT</span>ANDES7</td>
+  <td class="col-dist">42.2 km</td>
+  <td class="col-elev">↑ 4,097</td>
+</tr>
+<tr class="year-row"><td colspan="4">2018</td></tr>
+<tr>
+  <td class="col-date">10/21</td>
+  <td class="col-name">Individual Rando Corralco. Final del Campeonato Nacional. HER-MOSO.</td>
+  <td class="col-dist">11.0 km</td>
+  <td class="col-elev">↑ 1,046</td>
+</tr>
+<tr>
+  <td class="col-date">10/20</td>
+  <td class="col-name">Vertical Race Rando Corralco (+ respectiva bajada). 1er Lugar.</td>
+  <td class="col-dist">8.3 km</td>
+  <td class="col-elev">↑ 855</td>
+</tr>
+<tr>
+  <td class="col-date">10/06</td>
+  <td class="col-name">Els2900. La gloria describe ni la mitad.</td>
+  <td class="col-dist">71.6 km</td>
+  <td class="col-elev">↑ 6,083</td>
+</tr>
+<tr>
+  <td class="col-date">09/16</td>
+  <td class="col-name">Glen Coe (Bad Weather Route)</td>
+  <td class="col-dist">32.5 km</td>
+  <td class="col-elev">↑ 2,873</td>
+</tr>
+<tr>
+  <td class="col-date">08/26</td>
+  <td class="col-name">KIMA 2018</td>
+  <td class="col-dist">48.2 km</td>
+  <td class="col-elev">↑ 3,991</td>
+</tr>
+<tr>
+  <td class="col-date">05/13</td>
+  <td class="col-name">#2 Fecha Liga CX Chile. </td>
+  <td class="col-dist">27.0 km</td>
+  <td class="col-elev">↑ 368</td>
+</tr>
+<tr>
+  <td class="col-date">04/21</td>
+  <td class="col-name">Corralco Challenge 32k. </td>
+  <td class="col-dist">32.6 km</td>
+  <td class="col-elev">↑ 1,669</td>
+</tr>
+<tr>
+  <td class="col-date">04/14</td>
+  <td class="col-name">Papudo Trail Run. </td>
+  <td class="col-dist">31.5 km</td>
+  <td class="col-elev">↑ 1,519</td>
+</tr>
+<tr class="year-row"><td colspan="4">2017</td></tr>
+<tr>
+  <td class="col-date">10/29</td>
+  <td class="col-name">Round 4: Long Distance. 2do Overall Expertos. [La Gloria]</td>
+  <td class="col-dist">7.6 km</td>
+  <td class="col-elev">↑ 767</td>
+</tr>
+<tr>
+  <td class="col-date">10/28</td>
+  <td class="col-name">Round 3: Duplas.</td>
+  <td class="col-dist">6.9 km</td>
+  <td class="col-elev">↑ 471</td>
+</tr>
+<tr>
+  <td class="col-date">10/28</td>
+  <td class="col-name">Round 2: Vertical Race</td>
+  <td class="col-dist">2.5 km</td>
+  <td class="col-elev">↑ 456</td>
+</tr>
+<tr>
+  <td class="col-date">10/27</td>
+  <td class="col-name">Round 1: Sprint.</td>
+  <td class="col-dist">6.6 km</td>
+  <td class="col-elev">↑ 469</td>
+</tr>
+<tr>
+  <td class="col-date">06/16</td>
+  <td class="col-name">Bighorn100</td>
+  <td class="col-dist">71.4 km</td>
+  <td class="col-elev">↑ 3,979</td>
+</tr>
+<tr class="year-row"><td colspan="4">2016</td></tr>
+<tr>
+  <td class="col-date">10/15</td>
+  <td class="col-name">TNFEC 50k 2016. </td>
+  <td class="col-dist">52.9 km</td>
+  <td class="col-elev">↑ 2,627</td>
+</tr>
+<tr>
+  <td class="col-date">10/02</td>
+  <td class="col-name">Out of Hell</td>
+  <td class="col-dist">11.5 km</td>
+  <td class="col-elev">↑ 471</td>
+</tr>
+<tr>
+  <td class="col-date">09/10</td>
+  <td class="col-name">Carrera de Relevos // Rando Antillanca</td>
+  <td class="col-dist">4.0 km</td>
+  <td class="col-elev">↑ 232</td>
+</tr>
+<tr>
+  <td class="col-date">09/10</td>
+  <td class="col-name">Vertical Race. Rando Antillanca. </td>
+  <td class="col-dist">4.7 km</td>
+  <td class="col-elev">↑ 458</td>
+</tr>
+<tr>
+  <td class="col-date">08/28</td>
+  <td class="col-name">KIMA.</td>
+  <td class="col-dist">51.4 km</td>
+  <td class="col-elev">↑ 3,929</td>
+</tr>
+<tr>
+  <td class="col-date">08/06</td>
+  <td class="col-name">Rando Race Juegos Invernales. #4 Lugar.</td>
+  <td class="col-dist">8.9 km</td>
+  <td class="col-elev">↑ 656</td>
+</tr>
+<tr>
+  <td class="col-date">03/19</td>
+  <td class="col-name">Desafío Cumbres 2016</td>
+  <td class="col-dist">24.3 km</td>
+  <td class="col-elev">↑ 2,007</td>
+</tr>
+<tr>
+  <td class="col-date">02/28</td>
+  <td class="col-name">4 Refugios.</td>
+  <td class="col-dist">48.7 km</td>
+  <td class="col-elev">↑ 3,540</td>
+</tr>
+<tr class="year-row"><td colspan="4">2015</td></tr>
+<tr>
+  <td class="col-date">07/19</td>
+  <td class="col-name">Rando Race  #2 Lugar Categoria Open</td>
+  <td class="col-dist">8.9 km</td>
+  <td class="col-elev">↑ 694</td>
+</tr>
+<tr class="year-row"><td colspan="4">2012</td></tr>
+<tr>
+  <td class="col-date">12/16</td>
+  <td class="col-name">Vertical Mahuida</td>
+  <td class="col-dist">3.3 km</td>
+  <td class="col-elev">↑ 958</td>
+</tr>
+<tr class="tt-row">
+  <td class="col-date">11/07</td>
+  <td class="col-name"><span class="tt-tag">TT</span>Cerro La Campana - FKT</td>
+  <td class="col-dist">11.9 km</td>
+  <td class="col-elev">↑ 1,482</td>
+</tr>
+
+  </table>
+</div>
+</body>
+</html>
