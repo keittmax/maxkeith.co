@@ -111,7 +111,6 @@ La tirada final (ex-qui-si-ta) fue uno de los momentos más ‘altos’ que he t
 
 Al final, 2do por segundo año consecutivo y con más hambre que nunca por dedicarle el tiempo y el esfuerzo que corresponde a esto. Creo que tengo que sacarme la etiqueta (que yo mismo me impuse) de que “no sé esquiar” o “llevo poco tiempo esquiando” y empezar a creerme el cuento de una vez por todas. Tengo claro que estoy a años (literalmente) de poder ser competitivo a nivel real (leáse europeo) en esto, pero al final, acá me ganaron subiendo (qué es lo que se supone debería ser mi fuerte) y no tanto así bajando o “transcicionando” (que tengo que mejorar muchísimo aun) así que no tengo excusas.
 
-![cajon](/media/rr/randoantillanca/_14.jpg)
 **_foto fome...pero las parado arriba de un cajón por esquís me las merezco._**
 
 Lastima que este empezando el verano. Ja.
