@@ -202,7 +202,7 @@ const { useState } = React;
 // ━━ DATA ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 // When served by the training log server, window.__LIFETIME is pre-injected.
 // When served as a static page, data is fetched from the API at runtime.
-const EMPTY_DATA = { updated:'–', lt:{ totalH:0, totalM:0, sessions:0, distKm:0, elevM:0, avgH:0, avgM:0 }, acts:[], yearH:{} };
+const EMPTY_DATA = { updated:'–', lt:{ totalH:0, totalM:0, sessions:0, distKm:0, elevM:0, avgH:0, avgM:0, longestStreak:0, lastRestDay:'–' }, acts:[], yearH:{} };
 let DATA    = (window.__LIFETIME || {}).data    || EMPTY_DATA;
 let HEATMAP = (window.__LIFETIME || {}).heatmap || {};
 
@@ -310,6 +310,7 @@ function App() {
 
         <div className="pg-foot">
           {fmtKm(lt.distKm)} covered. {fmtEl(lt.elevM)} of elevation gain.<br/>
+          longest streak: {lt.longestStreak} days. last rest day: {lt.lastRestDay}.<br/>
           from training log — last updated {DATA.updated}.
         </div>
       </div>
