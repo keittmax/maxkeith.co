@@ -118,10 +118,11 @@ def post_card(post: dict, *, full: bool = True) -> str:
 
     if post["type"] == "short" or not post["title"]:
         # Show full content inline
+        title_html = f'<h2 class="post-title">{post["title"]}</h2>\n  ' if post["title"] else ""
         return f"""
 <article class="post post--short">
   <div class="post-meta">{meta_str}</div>
-  <div class="post-body">{post["body"]}</div>
+  {title_html}<div class="post-body">{post["body"]}</div>
 </article>"""
     else:
         # Title + excerpt + read more
