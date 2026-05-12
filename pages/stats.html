@@ -271,7 +271,7 @@ function App() {
         <div className="intro">
           <p>{fmtT(lt.totalH, lt.totalM)} of moving.</p>
           <p>{lt.sessions.toLocaleString()} sessions across {NUM_YEARS} years — an average of {fmtT(lt.avgH, lt.avgM)} a week.</p>
-          <p style={{color:'var(--dim)', marginTop:4}}>as of {DATA.updated}.<span className="live-dot" /></p>
+          <p style={{color:'var(--dim)', marginTop:4}}>auto-updates weekly.</p>
         </div>
 
         <hr />
@@ -311,8 +311,7 @@ function App() {
         <div className="pg-foot">
           {fmtKm(lt.distKm)} covered. {fmtEl(lt.elevM)} of elevation gain.<br/>
           longest streak: {lt.longestStreak} days. last rest day: {lt.lastRestDay}.<br/>
-          from training log — last updated {DATA.updated}.<br/>
-          666
+          from training log — updates every sunday.
         </div>
       </div>
 
