@@ -216,7 +216,7 @@ const THEMES = {
 // ━━ Helpers ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 const fmtT  = (h,m) => `${h.toLocaleString()}h ${String(m).padStart(2,'0')}m`;
 const fmtKm = km    => `${Math.round(km).toLocaleString()} km`;
-const fmtEl = m     => `${(Math.round(m/1000)*1000).toLocaleString()} m`;
+const fmtEl = m     => `${Math.round(m).toLocaleString()} m`;
 const fmtYH = d     => { const h=Math.floor(d), m=Math.round((d-h)*60); return m ? `${h}h ${String(m).padStart(2,'0')}m` : `${h}h`; };
 
 // ━━ Derived constants ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
